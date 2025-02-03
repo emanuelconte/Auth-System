@@ -1,4 +1,4 @@
-package java.auth;
+package auth.sys;
 
 import javax.persistence.*;
 import java.util.Collection;
