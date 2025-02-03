@@ -1,4 +1,4 @@
-package auth.sys;
+package auth.sys.config;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
