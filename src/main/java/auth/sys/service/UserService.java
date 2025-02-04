@@ -2,12 +2,15 @@ package auth.sys.service;
 
 import auth.sys.dto.LoginRequest;
 import auth.sys.dto.RegisterRequest;
+import auth.sys.dto.UserUpdateRequest;
 import auth.sys.exception.UserAlreadyExistsException;
 import auth.sys.model.User;
 import auth.sys.repository.UserRepository;
 import auth.sys.security.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -46,5 +49,29 @@ public class UserService {
         }
 
         return jwtUtil.generateToken(user.getUsername());
+    }
+
+    public void updateUser(Long id, UserUpdateRequest updateRequest) {
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("User not found!"));
+
+
+        if (updateRequest.getUsername() != null) {
+            user.setUsername(updateRequest.getUsername());
+        }
+        if (updateRequest.getEmail() != null) {
+            user.setEmail(updateRequest.getEmail());
+        }
+        if (updateRequest.getPassword() != null) {
+            user.setPassword(passwordEncoder.encode(updateRequest.getPassword()));
+        }
+
+        userRepository.save(user);
+    }
+
+    public void deleteUser(Long id) {
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("User not found!"));
+        userRepository.delete(user);
     }
 }
