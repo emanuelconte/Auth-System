@@ -1,5 +1,15 @@
 package auth.sys.service;
 
+import auth.sys.dto.LoginRequest;
+import auth.sys.dto.RegisterRequest;
+import auth.sys.exception.UserAlreadyExistsException;
+import auth.sys.model.User;
+import auth.sys.repository.UserRepository;
+import auth.sys.security.JwtUtil;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
+
 @Service
 public class UserService {
 

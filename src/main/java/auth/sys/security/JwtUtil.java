@@ -1,5 +1,10 @@
 package auth.sys.security;
 
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Component;
+
+import java.util.Date;
+
 @Component
 public class JwtUtil {
 
@@ -20,5 +25,9 @@ public class JwtUtil {
 
     private Date extractExpiration(String token) {
         return Jwts.parser().setSigningKey(SECRET_KEY).parseClaimsJws(token).getBody().getExpiration();
+    }
+
+    public String generateToken(String username) {
+        return null;
     }
 }

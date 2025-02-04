@@ -1,6 +1,7 @@
 package auth.sys.model;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
+
 
 @Entity
 public class User {
