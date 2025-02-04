@@ -1,5 +1,7 @@
 package auth.sys.service;
 
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
@@ -22,6 +24,14 @@ public class JwtService {
     public boolean validateToken(String token, UserDetails userDetails) {
         final String username = extractUsername(token);
         return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));
+    }
+
+    private String extractUsername(String token) {
+        return Jwts.parser()
+                .setSigningKey(SECRET_KEY) // Define a chave secreta para validar o token
+                .parseClaimsJws(token) // Faz o parsing do token
+                .getBody() // Obtém o corpo do token (claims)
+                .getSubject(); // Obtém o assunto (nome de usuário)
     }
 
     private boolean isTokenExpired(String token) {
