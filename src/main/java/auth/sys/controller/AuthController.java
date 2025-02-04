@@ -1,5 +1,6 @@
 package auth.sys.controller;
 
+import auth.sys.dto.JwtResponse;
 import auth.sys.dto.LoginRequest;
 import auth.sys.dto.RegisterRequest;
 import auth.sys.service.UserService;
