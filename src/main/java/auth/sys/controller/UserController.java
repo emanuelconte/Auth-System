@@ -1,5 +1,6 @@
 package auth.sys.controller;
 
+import auth.sys.dto.UserUpdateRequest;
 import auth.sys.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
