@@ -179,4 +179,17 @@ Contributions are welcome! Follow these steps:
 
 ---
 
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## Contact
+
+If you have questions or suggestions, feel free to reach out:
+
+- **Name**: Emanuel Conte
+- **Email**: emanuelcontecardoso@gmail.com
+- **GitHub**: emanuelconte (https://github.com/emanuelconte)
 
