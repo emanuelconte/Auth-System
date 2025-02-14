@@ -48,8 +48,8 @@ cd auth-system
 
 ```properties
 spring.datasource.url=jdbc:postgresql://localhost:5432/auth_system
-spring.datasource.username=your_username
-spring.datasource.password=your_password
+spring.datasource.username=root
+spring.datasource.password=admin
 
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
