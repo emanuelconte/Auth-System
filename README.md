@@ -11,7 +11,6 @@ This project is a basic authentication system built with **Java**, **Spring Boot
 - **Hibernate (JPA)**
 - **JSON Web Token (JWT)**
 - **BCrypt** (for password hashing)
-- **Thymeleaf** (for a basic web interface, optional)
 
 ## Features
 
