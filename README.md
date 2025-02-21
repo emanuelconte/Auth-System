@@ -178,9 +178,6 @@ Contributions are welcome! Follow these steps:
 
 ---
 
-## License
-
-
 ## Contact
 
 If you have questions or suggestions, feel free to reach out:
