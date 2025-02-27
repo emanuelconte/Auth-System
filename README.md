@@ -185,4 +185,3 @@ If you have questions or suggestions, feel free to reach out:
 - **Name**: Emanuel Conte
 - **Email**: emanuelcontecardoso@gmail.com
 - **GitHub**: emanuelconte (https://github.com/emanuelconte)
-
