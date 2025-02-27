@@ -13,7 +13,6 @@ This project is a basic authentication system built with **Java**, **Spring Boot
 - **BCrypt** (for password hashing)
 
 ## Features
-
 - **User Registration**: Create new users with a username, email, and password.
 - **Login**: Authenticate users and generate JWT tokens.
 - **User Update**: Update user information (username, email, password).
