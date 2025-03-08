@@ -119,7 +119,6 @@ Here are the main API endpoints:
     "email": "updateduser@example.com"
   }
   ```
-
 ### **Delete User**
 - **Method**: `DELETE`
 - **URL**: `/users/{id}`
