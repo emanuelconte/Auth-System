@@ -41,6 +41,7 @@ cd auth-system
 ```
 
 ### 2. Database Configuration
+
 1. Create a database in PostgreSQL named `auth_system`.
 2. Configure the database credentials in the `application.properties` file:
 
